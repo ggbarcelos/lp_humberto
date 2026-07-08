@@ -802,11 +802,24 @@ section, .footer { position: relative; }
   justify-content: center;
 }
 
+.footer-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
 .footer-logo {
-  width: clamp(280px, 30vw, 400px);
+  width: clamp(200px, 22vw, 320px);
   height: auto;
   display: block;
-  margin: 0 auto 1.5rem;
+}
+
+.footer-logo-pcdob {
+  width: clamp(50px, 6vw, 90px);
+  height: auto;
+  display: block;
 }
 
 .footer-social {
