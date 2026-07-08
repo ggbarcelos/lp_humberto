@@ -817,7 +817,7 @@ section, .footer { position: relative; }
 }
 
 .footer-logo-pcdob {
-  width: clamp(50px, 6vw, 90px);
+  width: clamp(70px, 8vw, 120px);
   height: auto;
   display: block;
 }
