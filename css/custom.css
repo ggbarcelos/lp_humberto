@@ -386,7 +386,8 @@ section, .footer { position: relative; }
 }
 
 .green-cta {
-  margin-top: 1.8rem;
+  margin-top: 0.2rem;
+  margin-bottom: 1.2rem;
   display: inline-flex;
   flex-direction: column;
   gap: 0.15rem;
