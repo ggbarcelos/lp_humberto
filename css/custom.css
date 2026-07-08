@@ -461,6 +461,7 @@ section, .footer { position: relative; }
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+  object-position: top center;
   border-radius: 14px;
   box-shadow: 0 8px 18px rgba(0,0,0,0.18);
 }
