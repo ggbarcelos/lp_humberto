@@ -348,10 +348,11 @@ section, .footer { position: relative; }
   }
 
   .hero-arrow {
-    bottom: 14px;
-    right: 50%;
-    transform: translateX(50%);
-    gap: 0.25rem;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 0.2rem;
+    width: auto;
   }
 
   .hero-arrow-text {
