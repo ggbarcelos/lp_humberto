@@ -766,10 +766,7 @@ section, .footer { position: relative; }
   }
 
   .yellow-photo-wrap {
-    justify-self: stretch;
-    width: 100%;
-    border-radius: 14px;
-    margin-top: -5.5rem;
+    display: none;
   }
 
   .yellow-bottom {
