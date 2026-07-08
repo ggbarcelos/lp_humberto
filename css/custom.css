@@ -1,5 +1,5 @@
-@import url('https://fonts.cdnfonts.com/css/nexa-rust-sans');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('fonts.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@400&display=swap');
 
 :root {
   --red: #DA251C;
@@ -7,7 +7,7 @@
   --green: #4D971E;
   --green-dark: #3D7A18;
   --yellow: #f1c232;
-  --font-nexa-rust: 'Nexa Rust Sans Black 01', 'Nexa Rust Sans Black 02', 'Nexa Rust Sans Black 03', 'Nexa Rust Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-nexa-rust: 'Nexa Rust Sans-Trial Black 2', 'Nexa Rust Sans Black 01', 'Nexa Rust Sans Black 02', 'Nexa Rust Sans Black 03', 'Nexa Rust Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -30,7 +30,7 @@ section, .footer { position: relative; }
 
 /* ─── HERO ─── */
 .hero {
-  min-height: 650px;
+  min-height: 580px;
   background: #EA3939;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 60px));
   margin-bottom: -60px;
@@ -131,14 +131,13 @@ section, .footer { position: relative; }
   justify-content: center;
 }
 
-.hero-star {
+.hero-map {
   position: absolute;
   z-index: 0;
-  width: min(390px, 34vw);
-  aspect-ratio: 1;
-  background: #f5c82c;
-  clip-path: polygon(50% 0%, 58% 16%, 72% 4%, 68% 22%, 85% 12%, 76% 29%, 96% 26%, 82% 40%, 100% 50%, 82% 60%, 96% 74%, 76% 71%, 85% 88%, 68% 78%, 72% 96%, 58% 84%, 50% 100%, 42% 84%, 28% 96%, 32% 78%, 15% 88%, 24% 71%, 4% 74%, 18% 60%, 0% 50%, 18% 40%, 4% 26%, 24% 29%, 15% 12%, 32% 22%, 28% 4%, 42% 16%);
-  filter: saturate(1.05);
+  width: min(400px, 36vw);
+  height: auto;
+  pointer-events: none;
+  margin-top: -8rem;
 }
 
 .hero-img-center {
@@ -147,7 +146,7 @@ section, .footer { position: relative; }
   justify-content: center;
   position: relative;
   z-index: 2;
-  margin-top: 1.8rem;
+  margin-top: 8rem;
 }
 
 .hero-img-center img {
@@ -220,7 +219,7 @@ section, .footer { position: relative; }
     gap: 1rem;
   }
 
-  .hero-star {
+  .hero-map {
     width: min(310px, 30vw);
   }
 }
@@ -257,7 +256,7 @@ section, .footer { position: relative; }
     order: 3;
   }
 
-  .hero-star {
+  .hero-map {
     width: min(260px, 56vw);
   }
 
@@ -342,9 +341,10 @@ section, .footer { position: relative; }
 
 .green-copy {
   color: #fff;
-  font-size: clamp(1rem, 1.2vw, 1.18rem);
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.15rem, 1.5vw, 1.4rem);
   line-height: 1.33;
-  font-weight: 800;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
