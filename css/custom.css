@@ -715,15 +715,7 @@ section, .footer { position: relative; }
   height: auto;
 }
 
-.yellow-photo-wrap::before {
-  content: '📣';
-  position: absolute;
-  top: -22px;
-  left: 50%;
-  transform: translateX(-50%) rotate(-9deg);
-  font-size: 2.3rem;
-  z-index: 2;
-}
+
 
 @media (max-width: 900px) {
   .yellow {
