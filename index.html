@@ -4,39 +4,134 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Humberto Matos</title>
+  <link href="https://fonts.cdnfonts.com/css/nexa-rust-sans" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
 
   <section class="hero">
-    <div class="container">
-      <div class="hero-img-center">
-        <img src="img/image22.png" alt="Humberto Matos">
+    <div class="lp-container">
+      <div class="hero-content">
+        <div class="hero-left">
+          <h1 class="hero-slogan">
+            <span>Vamos</span>
+            <span>juntos</span>
+            <span>acumular</span>
+            <span>forças na</span>
+          </h1>
+          <span class="hero-highlight">Pré-candidatura</span>
+        </div>
+
+        <div class="hero-photo-wrap">
+          <div class="hero-star" aria-hidden="true"></div>
+          <div class="hero-img-center">
+            <img src="img/image22-cut.png" alt="Humberto Matos">
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <img class="hero-logo" src="img/logo_humberto.png" alt="Humberto Matos">
+          <span class="hero-role">Pré-candidato a deputado estadual</span>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="green">
-    <div class="container">
+    <div class="lp-container">
       <div class="green-content">
-        <span class="green-tag">Humberto Matos</span>
-        <h2 class="green-headline">
-          <span>Professor,</span>
-          <span>militante</span>
-          <span>e uma nova</span>
-          <span>voz na</span>
-          <span>Assembleia</span>
-        </h2>
+        <div class="green-left">
+          <h2 class="green-headline">
+            <span>Professor,</span>
+            <span>militante</span>
+            <span>e uma <em>nova</em></span>
+            <span><em>voz na</em></span>
+            <span><em>Assembleia</em></span>
+          </h2>
+        </div>
+
+        <div class="green-right">
+          <p class="green-copy">
+            Humberto Matos é professor da rede pública, youtuber há 10 anos e militante por um Rio Grande do Sul com emprego, educação pública de qualidade e desenvolvimento regional com sustentabilidade. Agora pré-candidato a deputado estadual pelo Rio Grande do Sul pelo PCdoB.
+          </p>
+
+          <a class="green-cta" href="#">
+            <span class="green-cta-top">Apoie nossa caminhada</span>
+            <span class="green-cta-bottom">Participe da nossa vaquinha!</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="yellow"></section>
+  <section class="yellow">
+    <div class="lp-container">
+      <div class="yellow-content">
+        <p class="yellow-quote">
+          A sua participação no acúmulo de forças é o que vai fazer a diferença. Cada pessoa que se junta à nossa rede fortalece para construir uma nova forma de fazer política, com o povo de verdade.
+        </p>
 
-  <footer class="footer"></footer>
+        <div class="yellow-photo-wrap">
+          <img src="img/humberto2.jpeg" alt="Humberto Matos em ato político">
+        </div>
+      </div>
+
+      <div class="yellow-bottom">
+        <div class="yellow-gallery" aria-label="Galeria de atividades">
+          <img src="img/foto1.jpeg" alt="Atividade política com auditório lotado">
+          <img src="img/foto2.JPG" alt="Evento com público em plenária">
+          <img src="img/foto3.jpg" alt="Humberto em ato com apoiadores">
+          <img src="img/foto4.jpeg" alt="Humberto discursando em mesa de debate">
+        </div>
+
+        <form class="yellow-form" action="#" method="post">
+          <h3 class="yellow-form-title">Quero participar da campanha</h3>
+
+          <label>
+            Nome
+            <input type="text" name="nome" placeholder="Seu nome completo" required>
+          </label>
+
+          <label>
+            WhatsApp
+            <input type="tel" name="whatsapp" placeholder="(00) 00000-0000" required>
+          </label>
+
+          <label>
+            E-mail
+            <input type="email" name="email" placeholder="voce@email.com" required>
+          </label>
+
+          <label>
+            Cidade
+            <select name="cidade" id="cidade-select" required>
+              <option value="">Carregando cidades do RS...</option>
+            </select>
+          </label>
+
+          <label>
+            Mensagem
+            <textarea name="mensagem" rows="3" placeholder="Como você quer contribuir?"></textarea>
+          </label>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="lp-container">
+      <img class="footer-logo" src="img/logo_humberto.png" alt="Humberto Matos">
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/custom.js"></script>
 
 </body>
 </html>
