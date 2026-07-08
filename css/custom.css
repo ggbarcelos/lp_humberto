@@ -203,8 +203,10 @@ section, .footer { position: relative; }
   max-height: 560px;
   width: auto;
   display: block;
-  -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent 88%);
-  mask-image: linear-gradient(to bottom, #000 72%, transparent 88%);
+  object-fit: cover;
+  object-position: center 20%;
+  -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent 94%);
+  mask-image: linear-gradient(to bottom, #000 82%, transparent 94%);
   filter: drop-shadow(0 0 8px rgba(0,0,0,0.12)) drop-shadow(0 0 25px rgba(0,0,0,0.1));
 }
 
