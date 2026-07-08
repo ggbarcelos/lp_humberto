@@ -1,3 +1,4 @@
+// Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -8,6 +9,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// Parallax fade on scroll — elements fade & scale as they enter viewport
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('lp-visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.lp-animate-up, .lp-animate-left, .lp-animate-right').forEach(el => {
+  observer.observe(el);
+});
+
+// Form submit feedback
 document.querySelector('.yellow-form')?.addEventListener('submit', function (e) {
   e.preventDefault();
   const btn = this.querySelector('button[type="submit"]');
