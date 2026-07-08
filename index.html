@@ -34,19 +34,18 @@
             <span>acumular</span>
             <span>forças na</span>
           </h1>
-          <span class="hero-highlight">Pré-candidatura</span>
+          <img class="hero-g160" src="img/g160.png" alt="" aria-hidden="true">
         </div>
 
         <div class="hero-photo-wrap">
           <img class="hero-map" src="img/mapa.png" alt="" aria-hidden="true">
           <div class="hero-img-center">
-            <img src="img/image22-cut.png" alt="Humberto Matos">
+            <img src="img/image22.png" alt="Humberto Matos">
           </div>
         </div>
 
         <div class="hero-right">
-          <img class="hero-logo" src="img/logo_humberto.png" alt="Humberto Matos">
-          <span class="hero-role">Pré-candidato a deputado estadual</span>
+          <img class="hero-logo" src="img/logo_vertical.svg" alt="Humberto Matos">
         </div>
       </div>
     </div>
@@ -103,13 +102,8 @@
           <h3 class="yellow-form-title">Quero participar da campanha</h3>
 
           <label>
-            Nome
+            Nome completo
             <input type="text" name="nome" placeholder="Seu nome completo" required>
-          </label>
-
-          <label>
-            WhatsApp
-            <input type="tel" name="whatsapp" placeholder="(00) 00000-0000" required>
           </label>
 
           <label>
@@ -118,18 +112,96 @@
           </label>
 
           <label>
-            Cidade
-            <select name="cidade" id="cidade-select" required>
-              <option value="">Carregando cidades do RS...</option>
+            WhatsApp (com DDD)
+            <input type="tel" name="whatsapp" placeholder="(00) 00000-0000" required>
+          </label>
+
+          <label>
+            Estado
+            <select name="estado" required>
+              <option value="">Selecione</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
             </select>
           </label>
 
           <label>
-            Mensagem
-            <textarea name="mensagem" rows="3" placeholder="Como você quer contribuir?"></textarea>
+            Município
+            <input type="text" name="municipio" placeholder="Sua cidade">
           </label>
 
-          <button type="submit">Enviar</button>
+          <fieldset class="form-fieldset">
+            <legend>Já integrou ou integra algum coletivo, movimento, partido, sindicato, associação, pastoral ou organização popular?</legend>
+            <label class="form-radio"><input type="radio" name="integracao" value="sim"> Sim</label>
+            <label class="form-radio"><input type="radio" name="integracao" value="nao"> Não</label>
+          </fieldset>
+
+          <fieldset class="form-fieldset">
+            <legend>De que forma você pode colaborar com a pré-campanha?</legend>
+            <label class="form-check"><input type="checkbox" name="colaboracao" value="digital"> Atuação digital nas redes</label>
+            <label class="form-check"><input type="checkbox" name="colaboracao" value="encontros"> Organizar encontros na sua casa</label>
+            <label class="form-check"><input type="checkbox" name="colaboracao" value="rua"> Atuação de rua</label>
+            <label class="form-check"><input type="checkbox" name="colaboracao" value="financeiro"> Apoio financeiro</label>
+            <label class="form-check"><input type="checkbox" name="colaboracao" value="outra"> Tenho outra forma de ajudar</label>
+          </fieldset>
+
+          <fieldset class="form-fieldset">
+            <legend>Quais dessas bandeiras você abraça?</legend>
+            <label class="form-check"><input type="checkbox" name="bandeira" value="jornada"> Redução da jornada de trabalho</label>
+            <label class="form-check"><input type="checkbox" name="bandeira" value="transporte"> Transporte público gratuito e público</label>
+            <label class="form-check"><input type="checkbox" name="bandeira" value="violencia"> Enfrentamento à violência estatal e ao racismo</label>
+            <label class="form-check"><input type="checkbox" name="bandeira" value="feminismo"> Luta contra o machismo, o feminicídio e pela descriminalização do aborto</label>
+            <label class="form-check"><input type="checkbox" name="bandeira" value="lgbtqia"> Direitos LGBTQIA+</label>
+            <label class="form-check"><input type="checkbox" name="bandeira" value="anticapacitismo"> Anticapacitismo</label>
+            <label class="form-check"><input type="checkbox" name="bandeira" value="moradia"> Direito à cidade e moradia digna</label>
+            <label class="form-check"><input type="checkbox" name="bandeira" value="ciencia"> Ciência, tecnologia e soberania</label>
+            <label class="form-check"><input type="checkbox" name="bandeira" value="servico-publico"> Defesa do serviço público, das estatais e contra privatizações</label>
+            <label class="form-check"><input type="checkbox" name="bandeira" value="educacao"> Educação pública, gratuita e laica</label>
+            <label class="form-check"><input type="checkbox" name="bandeira" value="sus"> Saúde pública universal (SUS)</label>
+            <label class="form-check"><input type="checkbox" name="bandeira" value="climatica"> Justiça climática</label>
+            <label class="form-check"><input type="checkbox" name="bandeira" value="participacao"> Participação popular e controle social</label>
+            <label class="form-check"><input type="checkbox" name="bandeira" value="antifascismo"> Antifascismo e combate à extrema direita</label>
+            <label class="form-check"><input type="checkbox" name="bandeira" value="internacionalismo"> Internacionalismo e anti-imperialismo</label>
+            <label class="form-check"><input type="checkbox" name="bandeira" value="outras"> Outras</label>
+          </fieldset>
+
+          <fieldset class="form-fieldset">
+            <legend>Você aceita receber conteúdos pela nossa lista de transmissão no WhatsApp?</legend>
+            <label class="form-radio"><input type="radio" name="whatsapp-lista" value="sim"> Sim</label>
+            <label class="form-radio"><input type="radio" name="whatsapp-lista" value="nao"> Não</label>
+          </fieldset>
+
+          <label>
+            Gostaria de deixar um recado para o Humberto?
+            <textarea name="recado" rows="3" placeholder="Seu recado..."></textarea>
+          </label>
+
+          <button type="submit">QUERO ACUMULAR FORÇAS!</button>
         </form>
       </div>
     </div>
