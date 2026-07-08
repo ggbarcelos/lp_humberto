@@ -493,7 +493,6 @@ section, .footer { position: relative; }
   margin-bottom: -60px;
   display: flex;
   align-items: center;
-  overflow: hidden;
   padding: 6.2rem 0 7rem;
 }
 
@@ -698,9 +697,8 @@ section, .footer { position: relative; }
   justify-self: end;
   width: min(100%, 640px);
   border-radius: 18px;
-  overflow: hidden;
   position: relative;
-  margin-top: -5.5rem;
+  margin-top: -7rem;
 }
 
 .yellow-photo-wrap img {
