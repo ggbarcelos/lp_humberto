@@ -538,8 +538,9 @@ section, .footer { position: relative; }
 }
 
 .yellow-form-title {
-  font-family: var(--font-nexa-rust);
+  font-family: 'Inter', sans-serif;
   color: #2f8f1e;
+  font-weight: 800;
   font-size: clamp(1rem, 2vw, 1.4rem);
   text-transform: uppercase;
   line-height: 1;
