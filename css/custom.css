@@ -318,7 +318,7 @@ section, .footer { position: relative; }
   }
 
   .hero-g160 {
-    width: clamp(130px, 28vw, 170px);
+    width: clamp(160px, 34vw, 210px);
     margin-top: 0.4rem;
   }
 
