@@ -36,7 +36,11 @@ document.querySelectorAll('.lp-animate-up, .lp-animate-left, .lp-animate-right')
   // Helpers
   function getChecked(name) {
     return Array.from(form.querySelectorAll(`input[name="${name}"]:checked`))
-      .map(cb => cb.value).join('; ') || 'Nenhum';
+      .map(cb => cb.closest('label')?.textContent?.trim() || cb.value).join('; ') || 'Nenhum';
+  }
+
+  function labelText(el) {
+    return el?.closest('label')?.textContent?.trim() || el?.value || '';
   }
 
   // Create / get error message element
@@ -151,10 +155,10 @@ document.querySelectorAll('.lp-animate-up, .lp-animate-left, .lp-animate-right')
       email:      form.email.value.trim(),
       whatsapp:   form.whatsapp.value.trim(),
       cidade:     form.cidade.value,
-      integracao: form.querySelector('[name="integracao"]:checked')?.value || '',
+      integracao: labelText(form.querySelector('[name="integracao"]:checked')),
       colaboracao: getChecked('colaboracao'),
       bandeira:   getChecked('bandeira'),
-      'whatsapp-lista': form.querySelector('[name="whatsapp-lista"]:checked')?.value || '',
+      'whatsapp-lista': labelText(form.querySelector('[name="whatsapp-lista"]:checked')),
       recado:     form.recado.value.trim() || '(sem recado)'
     };
 
