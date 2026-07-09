@@ -329,7 +329,7 @@ section, .footer { position: relative; }
   }
 
   .hero-map {
-    width: min(280px, 72vw);
+    width: min(320px, 85vw);
     top: 0.5rem;
     left: 50%;
     transform: translateX(calc(-50% - 1rem));
