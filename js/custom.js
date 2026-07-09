@@ -23,23 +23,64 @@ document.querySelectorAll('.lp-animate-up, .lp-animate-left, .lp-animate-right')
   observer.observe(el);
 });
 
-// Form submit feedback
-document.querySelector('.yellow-form')?.addEventListener('submit', function (e) {
-  e.preventDefault();
-  const btn = this.querySelector('button[type="submit"]');
-  const originalText = btn.innerHTML;
-  btn.innerHTML = 'Enviando...';
-  btn.disabled = true;
+// ── EmailJS ──
+(function () {
+  const form = document.querySelector('.yellow-form');
+  if (!form) return;
 
-  setTimeout(() => {
-    btn.innerHTML = 'Cadastro Realizado!';
-    btn.style.background = '#28a745';
-    this.reset();
+  // ⚠️ Troque pelos seus dados do EmailJS
+  const SERVICE_ID = 'service_xxx';
+  const TEMPLATE_ID = 'template_xxx';
+  const PUBLIC_KEY  = 'xxxxxxxxxxxxxxx';
 
-    setTimeout(() => {
-      btn.innerHTML = originalText;
-      btn.style.background = '';
-      btn.disabled = false;
-    }, 3000);
-  }, 1500);
-});
+  emailjs.init(PUBLIC_KEY);
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Coleta checkboxes como string separada por "; "
+    function getChecked(name) {
+      return Array.from(form.querySelectorAll(`input[name="${name}"]:checked`))
+        .map(cb => cb.value).join('; ') || 'Nenhum';
+    }
+
+    const params = {
+      form_title: '📋 Novo cadastro - Pré-campanha Humberto Matos',
+      nome:       form.nome.value.trim(),
+      email:      form.email.value.trim(),
+      whatsapp:   form.whatsapp.value.trim(),
+      cidade:     form.cidade.value,
+      integracao: form.integracao?.value || '',
+      colaboracao: getChecked('colaboracao'),
+      bandeira:   getChecked('bandeira'),
+      'whatsapp-lista': form.querySelector('[name="whatsapp-lista"]:checked')?.value || '',
+      recado:     form.recado.value.trim() || '(sem recado)'
+    };
+
+    const btn = form.querySelector('button[type="submit"]');
+    const original = btn.textContent;
+    btn.textContent = 'Enviando...';
+    btn.disabled = true;
+
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, params)
+      .then(() => {
+        btn.textContent = 'Cadastro Realizado!';
+        btn.style.background = '#28a745';
+        form.reset();
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 3000);
+      })
+      .catch(() => {
+        btn.textContent = 'Erro ao enviar';
+        btn.style.background = '#dc3545';
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 3000);
+      });
+  });
+})();
