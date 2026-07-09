@@ -329,8 +329,8 @@ section, .footer { position: relative; }
   }
 
   .hero-map {
-    width: min(200px, 50vw);
-    top: 1rem;
+    width: min(280px, 72vw);
+    top: 0.5rem;
     left: 50%;
     transform: translateX(calc(-50% - 1rem));
   }
