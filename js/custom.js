@@ -29,9 +29,9 @@ document.querySelectorAll('.lp-animate-up, .lp-animate-left, .lp-animate-right')
   if (!form) return;
 
   // ⚠️ Troque pelos seus dados do EmailJS
-  const SERVICE_ID = 'service_xxx';
-  const TEMPLATE_ID = 'template_xxx';
-  const PUBLIC_KEY  = 'xxxxxxxxxxxxxxx';
+  const SERVICE_ID = 'service_z8vqahp';
+  const TEMPLATE_ID = 'template_dh3d49u';
+  const PUBLIC_KEY  = 'vRAx-eHsaXBghVQkt';
 
   emailjs.init(PUBLIC_KEY);
 
