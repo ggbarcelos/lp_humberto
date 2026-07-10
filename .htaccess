@@ -1,6 +1,9 @@
 # ─── Suba este arquivo para a RAIZ do site (public_html /) ───
 # (Substitua o .htaccess existente do WordPress)
 
+# Forçar uso de index.html como prioridade
+DirectoryIndex index.html index.php
+
 # BEGIN LSCACHE
 ## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
 <IfModule mod_rewrite.c>
@@ -36,8 +39,8 @@ CacheKeyModify -qs:_ga
 RewriteEngine On
 
 # Exceção para a pasta lp
-RewriteCond %{REQUEST_URI} ^/lp/
-RewriteRule ^ - [L]
+RewriteCond %{REQUEST_URI} ^/lp(/.*)?$
+RewriteRule ^lp/ - [L]
 
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 RewriteBase /
