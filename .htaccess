@@ -36,12 +36,8 @@ CacheKeyModify -qs:_ga
 RewriteEngine On
 
 # Exceção para a pasta lp
-RewriteCond %{REQUEST_URI} ^/lp/?$
-RewriteRule ^ /lp/index.html [L]
-
-# Passar os demais arquivos do lp sem interferência
 RewriteCond %{REQUEST_URI} ^/lp/
-RewriteRule .* - [L]
+RewriteRule ^ - [L]
 
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 RewriteBase /
