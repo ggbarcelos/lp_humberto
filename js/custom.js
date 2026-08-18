@@ -33,7 +33,6 @@ document.querySelectorAll('.lp-animate-up, .lp-animate-left, .lp-animate-right')
 
   emailjs.init(PUBLIC_KEY);
 
-  // Helpers
   function getChecked(name) {
     return Array.from(form.querySelectorAll(`input[name="${name}"]:checked`))
       .map(cb => cb.closest('label')?.textContent?.trim() || cb.value).join('; ') || 'Nenhum';
@@ -43,7 +42,6 @@ document.querySelectorAll('.lp-animate-up, .lp-animate-left, .lp-animate-right')
     return el?.closest('label')?.textContent?.trim() || el?.value || '';
   }
 
-  // Create / get error message element
   function getErrorEl(field) {
     let el = field.parentNode.querySelector('.form-error-msg');
     if (!el) {
@@ -81,35 +79,34 @@ document.querySelectorAll('.lp-animate-up, .lp-animate-left, .lp-animate-right')
     clearErrors();
     let valid = true;
 
-    // Nome
     const nome = form.nome.value.trim();
     if (!nome) { showError(form.nome, 'Informe seu nome'); valid = false; }
 
-    // Email
     const email = form.email.value.trim();
     if (!email) { showError(form.email, 'Informe seu e-mail'); valid = false; }
     else if (!/\S+@\S+\.\S+/.test(email)) { showError(form.email, 'E-mail inválido'); valid = false; }
 
-    // WhatsApp
     const whats = form.whatsapp.value.trim();
     if (!whats) { showError(form.whatsapp, 'Informe seu WhatsApp'); valid = false; }
 
-    // Cidade
     if (!form.cidade.value) { showError(form.cidade, 'Selecione sua cidade'); valid = false; }
 
-    // Integração (radio)
     const integ = form.querySelector('[name="integracao"]:checked');
     if (!integ) { markFieldsetInvalid(form.querySelector('.form-fieldset:nth-of-type(1)')); valid = false; }
 
-    // Colaboração (checkbox - pelo menos 1)
     const colab = form.querySelectorAll('[name="colaboracao"]:checked');
     if (colab.length === 0) { markFieldsetInvalid(form.querySelector('.form-fieldset:nth-of-type(2)')); valid = false; }
+    else if (!form.querySelector('[name="colaboracao"][value="financeiro"]:checked')) {
+      showError(
+        form.querySelector('[name="colaboracao"][value="financeiro"]'),
+        'Apoio financeiro é obrigatório'
+      );
+      valid = false;
+    }
 
-    // Bandeiras (checkbox - pelo menos 1)
     const band = form.querySelectorAll('[name="bandeira"]:checked');
     if (band.length === 0) { markFieldsetInvalid(form.querySelector('.form-fieldset:nth-of-type(3)')); valid = false; }
 
-    // WhatsApp lista (radio)
     const wpLista = form.querySelector('[name="whatsapp-lista"]:checked');
     if (!wpLista) { markFieldsetInvalid(form.querySelector('.form-fieldset:nth-of-type(4)')); valid = false; }
 
@@ -118,30 +115,6 @@ document.querySelectorAll('.lp-animate-up, .lp-animate-left, .lp-animate-right')
     }
 
     return valid;
-  }
-
-  // Success toast
-  function showToast() {
-    const existing = document.querySelector('.form-toast');
-    if (existing) existing.remove();
-
-    const toast = document.createElement('div');
-    toast.className = 'form-toast';
-    toast.innerHTML = `
-      <div class="form-toast-icon">
-        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
-      </div>
-      <div class="form-toast-content">
-        <h4>Cadastro enviado!</h4>
-        <p>Seus dados foram recebidos. Entraremos em contato em breve.</p>
-      </div>
-    `;
-    document.body.appendChild(toast);
-    requestAnimationFrame(() => toast.classList.add('is-open'));
-    setTimeout(() => {
-      toast.classList.remove('is-open');
-      setTimeout(() => toast.remove(), 500);
-    }, 5000);
   }
 
   // Submit
@@ -169,7 +142,6 @@ document.querySelectorAll('.lp-animate-up, .lp-animate-left, .lp-animate-right')
 
     emailjs.send(SERVICE_ID, TEMPLATE_ID, params)
       .then(() => {
-        showToast();
         form.reset();
         clearErrors();
         btn.textContent = 'Cadastro Realizado!';
