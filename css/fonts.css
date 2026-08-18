@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Nexa Rust Sans-Trial Black 2';
-  src: url('../fonts/NexaRustSans-Trial-Black2.woff2?v=2') format('woff2');
+  src: url('../fonts/NexaRustSans-Trial-Black2.woff2?v=3') format('woff2'),
+       url('../fonts/NexaRustSans-Trial-Black2.ttf?v=3') format('truetype');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -8,7 +9,8 @@
 
 @font-face {
   font-family: 'CitrusGothicRough-Regular';
-  src: url('../fonts/CitrusGothicRough-Regular.woff2?v=2') format('woff2');
+  src: url('../fonts/CitrusGothicRough-Regular.woff2?v=3') format('woff2'),
+       url('../fonts/CitrusGothicRough-Regular.ttf?v=3') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -16,7 +18,8 @@
 
 @font-face {
   font-family: 'BebasNeue';
-  src: url('../fonts/BebasNeue.woff2?v=2') format('woff2');
+  src: url('../fonts/BebasNeue.woff2?v=3') format('woff2'),
+       url('../fonts/BebasNeue.ttf?v=3') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -24,7 +27,8 @@
 
 @font-face {
   font-family: 'Hey-August';
-  src: url('../fonts/Hey-August.woff2?v=2') format('woff2');
+  src: url('../fonts/Hey-August.woff2?v=3') format('woff2'),
+       url('../fonts/Hey-August.ttf?v=3') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
