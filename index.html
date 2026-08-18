@@ -31,22 +31,28 @@
   <!-- ============ HEADER / NAVBAR ============ -->
   <header class="site-header">
     <div class="lp-container">
-      <div class="header-row">
-        <a class="header-brand" href="#topo" aria-label="Humberto Matos">
+      <nav class="navbar navbar-expand-lg navbar-dark p-0" aria-label="Navegação principal">
+        <a class="navbar-brand order-0 p-0 m-0" href="#topo" aria-label="Humberto Matos">
           <img src="img/new/logohumberto.png" alt="Humberto Matos" class="brand-logo">
         </a>
 
-        <nav class="header-nav" aria-label="Navegação principal">
-          <a href="#projeto">NOSSO PROJETO DE FUTURO</a>
-          <a href="#comunicador">ME CONHECE?</a>
-          <a href="#acumular-forca">ACUMULAR FORÇA</a>
-          <a href="#topo">REDES SOCIAIS</a>
-        </nav>
-
-        <div class="header-number">
+        <div class="header-number order-1 order-lg-3 ms-3 ms-lg-0">
           <img src="img/new/numero.png" alt="Número 65065" class="numero-logo">
         </div>
-      </div>
+
+        <button class="navbar-toggler order-2 order-lg-1 ms-auto ms-lg-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse order-3 order-lg-2" id="navbarNav">
+          <ul class="navbar-nav justify-content-lg-center">
+            <li class="nav-item"><a class="nav-link" href="#projeto">NOSSO PROJETO DE FUTURO</a></li>
+            <li class="nav-item"><a class="nav-link" href="#comunicador">ME CONHECE?</a></li>
+            <li class="nav-item"><a class="nav-link" href="#acumular-forca">ACUMULAR FORÇA</a></li>
+            <li class="nav-item"><a class="nav-link" href="#redes">REDES SOCIAIS</a></li>
+          </ul>
+        </div>
+      </nav>
     </div>
   </header>
 
@@ -87,8 +93,8 @@
 
         <div class="comunicador-right lp-animate-right">
           <figure class="comunicador-photo-wrap">
-            <img class="comunicador-photo" src="img/foto3.jpg" alt="Humberto Matos">
-            <figcaption class="comunicador-caption">PROFESSOR HÁ 20 ANOS<br>DA REDE PÚBLICA</figcaption>
+            <img class="comunicador-photo" src="img/foto3.jpg" alt="Humberto Matos" loading="lazy" decoding="async">
+            <figcaption class="comunicador-caption">PROFESSOR HÁ 21 ANOS<br>DA REDE PÚBLICA</figcaption>
           </figure>
         </div>
       </div>
@@ -100,15 +106,15 @@
     <div class="lp-container">
       <div class="stats-row">
         <figure class="stat-card stat-1">
-          <img src="img/fotos/foto1.jpg" alt="Humberto Matos">
+          <img src="img/fotos/foto1.jpg" alt="Humberto Matos" loading="lazy" decoding="async">
           <figcaption>ENFRENTEI<br>A EXTREMA DIREITA</figcaption>
         </figure>
         <figure class="stat-card stat-2">
-          <img src="img/fotos/foto2.jpg" alt="Humberto Matos">
+          <img src="img/fotos/foto2.jpg" alt="Humberto Matos" loading="lazy" decoding="async">
           <figcaption>MAIS DE 47 MILHÕES<br>DE VISUALIZAÇÕES</figcaption>
         </figure>
         <figure class="stat-card stat-3">
-          <img src="img/fotos/foto4.jpeg" alt="Humberto Matos">
+          <img src="img/fotos/foto4.jpeg" alt="Humberto Matos" loading="lazy" decoding="async">
           <figcaption>A 6ª MAIOR<br>VAQUINHA DO BRASIL</figcaption>
         </figure>
       </div>
@@ -129,7 +135,7 @@
       <!-- EIXO 1 -->
       <article class="eixo eixo-1">
         <div class="eixo-1-media">
-          <img src="img/new/bandeira.png" alt="Bandeira do Rio Grande do Sul">
+          <img src="img/new/bandeira.png" alt="Bandeira do Rio Grande do Sul" loading="lazy" decoding="async">
           <div class="eixo-1-caption">
             <span class="eixo-tag">EIXO 1</span>
             <h3 class="eixo-title">CANCELAMENTO DA DÍVIDA<br>DO ESTADO COM A UNIÃO</h3>
@@ -140,7 +146,7 @@
       <!-- EIXO 2 -->
       <article class="eixo eixo-2">
         <div class="eixo-2-media">
-          <img src="img/new/Enchentes.png" alt="Prevenção de enchentes" class="eixo-2-img">
+          <img src="img/new/Enchentes.png" alt="Prevenção de enchentes" class="eixo-2-img" loading="lazy" decoding="async">
           <div class="eixo-2-caption">
             <span class="eixo-2-tag">EIXO 2</span>
           </div>
@@ -166,7 +172,7 @@
       <!-- EIXO 3 -->
       <article class="eixo eixo-3">
         <div class="eixo-3-media">
-          <img src="img/new/Papeis.png" alt="Papeis" class="eixo-3-img">
+          <img src="img/new/Papeis.png" alt="Papeis" class="eixo-3-img" loading="lazy" decoding="async">
           <div class="eixo-3-caption">
             <span class="eixo-3-tag">EIXO 3</span>
           </div>
@@ -192,7 +198,7 @@
       <!-- EIXO 4 -->
       <article class="eixo eixo-4">
         <div class="eixo-4-media">
-          <img src="img/new/Industria.png" alt="Indústria" class="eixo-4-img">
+          <img src="img/new/Industria.png" alt="Indústria" class="eixo-4-img" loading="lazy" decoding="async">
           <div class="eixo-4-caption">
             <span class="eixo-4-tag">EIXO 4</span>
           </div>
@@ -810,13 +816,13 @@
   <footer class="footer" id="redes">
     <div class="lp-container">
       <div class="footer-photos">
-        <img class="footer-photo" src="img/fotos/foto4.jpeg" alt="Humberto Matos">
-        <img class="footer-photo" src="img/fotos/foto6.jpg" alt="Humberto Matos">
-        <img class="footer-photo" src="img/fotos/foto2.jpg" alt="Humberto Matos">
-        <img class="footer-photo" src="img/fotos/foto1.jpg" alt="Humberto Matos">
+        <img class="footer-photo" src="img/fotos/foto4.jpeg" alt="Humberto Matos" loading="lazy" decoding="async">
+        <img class="footer-photo" src="img/fotos/foto6.jpg" alt="Humberto Matos" loading="lazy" decoding="async">
+        <img class="footer-photo" src="img/fotos/foto2.jpg" alt="Humberto Matos" loading="lazy" decoding="async">
+        <img class="footer-photo" src="img/fotos/foto1.jpg" alt="Humberto Matos" loading="lazy" decoding="async">
       </div>
 
-      <img class="footer-logo-humberto-footer" src="img/new/logohumbertofotter.jpeg" alt="Humberto Matos 65065">
+      <img class="footer-logo-humberto-footer" src="img/new/logohumbertofotter.jpeg" alt="Humberto Matos 65065" loading="lazy" decoding="async">
 
       <p class="footer-quote">"ACUMULAR FORÇA PARA UMA<br>NOVA FORMA POLÍTICA!"</p>
 
@@ -826,7 +832,7 @@
           <p class="footer-cpj">CNPJ DA CAMPANHA: <span class="footer-cnpj-num">68.312.528/0001-30</span></p>
         </div>
         <div class="footer-pcdb">
-          <img class="footer-logo-pcdb" src="img/new/logopcdbfotter.jpeg" alt="PCdoB">
+          <img class="footer-logo-pcdb" src="img/new/logopcdbfotter.jpeg" alt="PCdoB" loading="lazy" decoding="async">
           <div class="footer-social">
             <a href="https://www.instagram.com/prof_humberto_matos" target="_blank" aria-label="Instagram">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
