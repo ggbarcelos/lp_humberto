@@ -6,21 +6,30 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (target) {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+
+    // Close the Bootstrap menu after navigating on small screens.
+    const menu = document.querySelector('#navbarNav');
+    if (menu?.classList.contains('show') && window.bootstrap) {
+      window.bootstrap.Collapse.getOrCreateInstance(menu).hide();
+    }
   });
 });
 
 // IntersectionObserver for scroll reveal
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('lp-visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-document.querySelectorAll('.lp-animate-up, .lp-animate-left, .lp-animate-right').forEach(el => {
-  observer.observe(el);
-});
+const animatedElements = document.querySelectorAll('.lp-animate-up, .lp-animate-left, .lp-animate-right');
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('lp-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  animatedElements.forEach(el => observer.observe(el));
+} else {
+  animatedElements.forEach(el => el.classList.add('lp-visible'));
+}
 
 // ── EmailJS ──
 (function () {
@@ -30,6 +39,11 @@ document.querySelectorAll('.lp-animate-up, .lp-animate-left, .lp-animate-right')
   const SERVICE_ID = 'service_z8vqahp';
   const TEMPLATE_ID = 'template_dh3d49u';
   const PUBLIC_KEY  = 'vRAx-eHsaXBghVQkt';
+
+  if (!window.emailjs) {
+    console.warn('EmailJS não foi carregado. O formulário permanece visível, mas não pode ser enviado.');
+    return;
+  }
 
   emailjs.init(PUBLIC_KEY);
 
