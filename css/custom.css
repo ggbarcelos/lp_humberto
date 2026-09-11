@@ -85,6 +85,7 @@ section, .footer, .site-header { position: relative; }
 
 .navbar-nav {
   gap: clamp(0.8rem, 2vw, 1.8rem);
+  flex-wrap: nowrap;
 }
 
 .navbar-nav .nav-link {
@@ -107,6 +108,10 @@ section, .footer, .site-header { position: relative; }
   color: var(--orange);
   transform: translateY(-1px);
   outline: none;
+}
+
+.navbar-nav .nav-link-support {
+  color: var(--orange);
 }
 
 .navbar-toggler {
@@ -201,12 +206,36 @@ section, .footer, .site-header { position: relative; }
   text-decoration: none;
   text-transform: uppercase;
   padding: 0.6rem 1.6rem;
-  margin-top: 1.5rem;
+  margin-top: 0;
   transition: background 0.25s ease, transform 0.25s ease;
   min-height: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  width: max-content;
+  max-width: 100%;
+}
+
+.hero-actions .hero-cta {
+  width: 100%;
+}
+
+/* Keep the expanded navigation on one line while making room for the support link. */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar-nav { gap: 0.35rem; }
+  .navbar-nav .nav-link {
+    font-size: 0.92rem;
+    letter-spacing: 0.035em;
+    padding-inline: 0.2rem;
+  }
 }
 
 .hero-cta:hover {
@@ -1130,6 +1159,10 @@ section, .footer, .site-header { position: relative; }
     gap: 0.2rem;
   }
 
+  .navbar-nav .nav-link-support {
+    color: var(--orange);
+  }
+
   .navbar-nav .nav-link {
     padding: 0.55rem 0.3rem;
     font-size: 1.15rem;
@@ -1298,6 +1331,10 @@ section, .footer, .site-header { position: relative; }
     text-align: center;
   }
 
+  .hero-actions {
+    width: 100%;
+  }
+
   .projeto-title,
   .campanha-title {
     font-size: clamp(2rem, 10vw, 2.8rem);
@@ -1418,6 +1455,10 @@ section, .footer, .site-header { position: relative; }
     font-size: clamp(0.7rem, 2.9vw, 0.85rem);
     padding: 0.5rem 0.9rem;
     width: 100%;
+  }
+
+  .hero-actions {
+    gap: 0.65rem;
   }
 
   .footer-social a {
